@@ -1,9 +1,22 @@
-import * as fs from 'fs';
+// Импорт модулей Node.js
+import fs from 'fs';
 import path from 'path';
-import { buildFile, buildDirectory } from './constants.mjs';
 
+// Импорт констант и функций
+import { buildFileName, buildDirectory } from './constants.mjs';
+
+/**
+ * Сохраняет индексный файл в указанную директорию.
+ *
+ * @param {Object} data - Данные для сохранения в индексный файл
+ */
 export default function saveIndexToFile(data) {
-  const indexPath = path.join(buildDirectory, buildFile);
+  // Путь к индексному файлу в директории build
+  const indexPath = path.join(buildDirectory, buildFileName);
+
+  // Записываем данные в индексный файл с форматированием (2 пробела для отступов)
   fs.writeFileSync(indexPath, JSON.stringify(data, null, 2));
-  console.log(`Файл ${buildFile} создан успешно!`);
+
+  // Выводим сообщение об успешном создании файла в консоль
+  console.log(`Файл ${buildFileName} создан успешно!`);
 }

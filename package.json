@@ -1,0 +1,49 @@
+{
+  "name": "lint-staged-template",
+  "version": "1.0.0",
+  "description": "Проект с предустановленными настройками lint-staged для автоматической проверки и исправления кода перед коммитом. Идеальный старт для соблюдения стандартов кодирования в вашем проекте.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotACat1/lint-staged-template.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS"
+  ],
+  "author": "NotACat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotACat1/lint-staged-template/issues"
+  },
+  "homepage": "https://github.com/NotACat1/lint-staged-template#readme",
+  "scripts": {
+    "msg-commit": "npx commitlint -E HUSKY_GIT_PARAMS",
+    "pre-commit": "npx lint-staged",
+    "husky-inst": "npx husky install && chmod +x .husky/pre-commit .husky/commit-msg",
+    "build": "node src/index"
+  },
+  "lint-staged": {
+    "*.{mjs,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "commitlint": "^18.4.4",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^18.4.4",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2"
+  }
+}

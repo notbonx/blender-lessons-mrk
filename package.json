@@ -1,22 +1,24 @@
 {
-  "name": "lint-staged-template",
+  "name": "compass-3d-courses",
   "version": "1.0.0",
+	"type": "module",
   "description": "Проект с предустановленными настройками lint-staged для автоматической проверки и исправления кода перед коммитом. Идеальный старт для соблюдения стандартов кодирования в вашем проекте.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NotACat1/lint-staged-template.git"
+    "url": "git+https://github.com/NotACat1/COMPASS-3D-courses.git"
   },
   "keywords": [
-    "HTML",
-    "CSS"
+    "Backend",
+    "JS",
+		"Node.js"
   ],
   "author": "NotACat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NotACat1/lint-staged-template/issues"
+    "url": "https://github.com/NotACat1/COMPASS-3D-courses/issues"
   },
-  "homepage": "https://github.com/NotACat1/lint-staged-template#readme",
+  "homepage": "https://github.com/NotACat1/COMPASS-3D-courses#readme",
   "scripts": {
     "msg-commit": "npx commitlint -E HUSKY_GIT_PARAMS",
     "pre-commit": "npx lint-staged",

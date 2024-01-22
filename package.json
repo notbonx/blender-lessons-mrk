@@ -1,7 +1,7 @@
 {
   "name": "compass-3d-courses",
   "version": "1.0.0",
-	"type": "module",
+  "type": "module",
   "description": "Проект с предустановленными настройками lint-staged для автоматической проверки и исправления кода перед коммитом. Идеальный старт для соблюдения стандартов кодирования в вашем проекте.",
   "main": "index.js",
   "repository": {
@@ -11,7 +11,7 @@
   "keywords": [
     "Backend",
     "JS",
-		"Node.js"
+    "Node.js"
   ],
   "author": "NotACat",
   "license": "ISC",
@@ -23,7 +23,9 @@
     "msg-commit": "npx commitlint -E HUSKY_GIT_PARAMS",
     "pre-commit": "npx lint-staged",
     "husky-inst": "npx husky install && chmod +x .husky/pre-commit .husky/commit-msg",
-    "build": "node src/index"
+    "build": "node src/index",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "lint-staged": {
     "*.{mjs,js,jsx}": [
@@ -46,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2"
+    "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.1.1"
   }
 }

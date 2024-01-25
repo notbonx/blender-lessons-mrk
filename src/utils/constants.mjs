@@ -1,10 +1,16 @@
+// Импорт модулей Node.js
 import path from 'path';
 
-const rootDirectory = '.';
-const buildDirectory = path.join(rootDirectory, 'build');
-const workDirectory = path.join(rootDirectory, 'src/data');
+// Корневая директория проекта
+const projectRootDirectory = '.';
 
-const buildFile = 'index.json';
-const additionalInfoFile = 'index.json';
+// Директории
+const buildDirectory = path.join(projectRootDirectory, 'build');
+const workDirectory = path.join(projectRootDirectory, 'src/data');
+const assetsDirectory = 'images';
 
-export { rootDirectory, buildDirectory, buildFile, additionalInfoFile, workDirectory };
+// Имена файлов
+const buildFileName = 'index.json';
+const additionalInfoFileName = 'index.json';
+
+export { assetsDirectory, projectRootDirectory, buildDirectory, buildFileName, additionalInfoFileName, workDirectory };

@@ -1,19 +1,10 @@
-import * as fs from 'fs';
+// Импортироание функций
+import processFoldersRecursively from './utils/processFoldersRecursively.mjs';
+import clearAndCopyIndexFiles from './utils/clearAndCopyIndexFiles.mjs';
+
+// Импортироание констант
 import { buildDirectory, workDirectory } from './utils/constants.mjs';
 
-import generateIndex from './utils/generateIndex.mjs';
-import saveIndexToFile from './utils/saveIndexToFile.mjs';
-
-// Создание папки build, если её нет
-if (!fs.existsSync(buildDirectory)) {
-  fs.mkdirSync(buildDirectory);
-}
-
-// Создание папки build, если её нет
-if (!fs.existsSync(buildDirectory)) {
-  fs.mkdirSync(buildDirectory);
-}
-
-// Генерация индекса и сохранение в файл
-const indexData = generateIndex(workDirectory);
-saveIndexToFile(indexData);
+// Запускаем процесс обработки папок
+processFoldersRecursively(workDirectory);
+clearAndCopyIndexFiles(workDirectory, buildDirectory);

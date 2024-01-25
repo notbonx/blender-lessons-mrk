@@ -23,7 +23,7 @@ const clearAndCopyIndexFiles = async (srcPath, buildPath) => {
   const buildIndexPath = path.join(buildPath, buildFileName);
 
   // Создание пустого объекта данных и запись его в файл index.json
-  const buildIndexData = { items: [] };
+  const buildIndexData = [];
   await fs.promises.writeFile(buildIndexPath, JSON.stringify(buildIndexData, null, 2));
   console.log(`Created ${buildIndexPath}`);
 

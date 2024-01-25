@@ -26,8 +26,8 @@ const copyIndexFiles = async (srcPath, buildPath, buildIndexData) => {
       const srcIndexContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
       const buildIndexPath = path.join(buildPath, buildFileName);
 
-      // Добавляем содержимое файла index.json в массив items в файле build/index.json
-      buildIndexData.items.push(srcIndexContent);
+      // Добавляем содержимое файла index.json в массив в файле build/index.json
+      buildIndexData.push(srcIndexContent);
 
       // Записываем обновленные данные обратно в файл
       await fs.promises.writeFile(buildIndexPath, JSON.stringify(buildIndexData, null, 2));

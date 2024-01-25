@@ -7,9 +7,10 @@ const projectRootDirectory = '.';
 // Директории
 const buildDirectory = path.join(projectRootDirectory, 'build');
 const workDirectory = path.join(projectRootDirectory, 'src/data');
+const assetsDirectory = 'images';
 
 // Имена файлов
 const buildFileName = 'index.json';
 const additionalInfoFileName = 'index.json';
 
-export { projectRootDirectory, buildDirectory, buildFileName, additionalInfoFileName, workDirectory };
+export { assetsDirectory, projectRootDirectory, buildDirectory, buildFileName, additionalInfoFileName, workDirectory };

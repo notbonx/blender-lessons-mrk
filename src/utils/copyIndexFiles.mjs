@@ -14,6 +14,12 @@ const copyIndexFiles = async (srcPath, buildPath, buildIndexData) => {
   const files = fs.readdirSync(srcPath);
   const srcItems = fs.readdirSync(srcPath);
 
+  files.sort((file1, file2) => {
+    const count1 = file1.replace(/^(\d+)\s*\.?-?(.*)$/, '$1');
+    const count2 = file2.replace(/^(\d+)\s*\.?-?(.*)$/, '$1');
+    return count1 - count2;
+  });
+
   for (const file of files) {
     const filePath = path.join(srcPath, file);
 

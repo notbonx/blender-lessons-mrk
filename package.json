@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NotACat1/COMPASS-3D-courses.git"
+    "url": "git+https://github.com/notbonx/blender-lessons-mrk.git"
   },
   "keywords": [
     "Backend",
@@ -16,9 +16,9 @@
   "author": "NotACat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NotACat1/COMPASS-3D-courses/issues"
+    "url": "https://github.com/notbonx/blender-lessons-mrk/issues"
   },
-  "homepage": "https://github.com/NotACat1/COMPASS-3D-courses#readme",
+  "homepage": "https://github.com/notbonx/blender-lessons-mrk#readme",
   "scripts": {
     "msg-commit": "npx commitlint -E HUSKY_GIT_PARAMS",
     "pre-commit": "npx lint-staged",
